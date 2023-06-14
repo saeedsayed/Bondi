@@ -1,0 +1,215 @@
+:root{
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-btn{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: .5rem 1rem;
+    font-weight: 600;
+}
+.main-btn:hover{
+    background-color: var(--red-color);
+}
+
+.main-title::after{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left:50%;
+    transform: translateX(-50%);
+}
+/* start navbar */
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .nav-item .nav-link{
+    color: #fff;
+}
+.navbar .nav-item .nav-link.active,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link:focus{
+    color: var(--green-color);
+}
+.navbar .navbar-toggler{
+    border-color: #fff;
+    color: #fff;
+    font-size: 25px;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--green-color);
+
+}
+.navbar .serch{
+    border-left: 1px solid var(--green-color);
+}
+.navbar .serch svg{
+    color: var(--green-color);
+}
+/* end navbar */
+/* start landing */
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 70px);
+}
+.landing h1::after{
+    content: '';
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: -10px;
+    animation: move linear 8s infinite;
+    mix-blend-mode: difference;
+}
+@keyframes move {
+    0%,100%{
+        left: -10px;
+    }
+    50%{
+        left: calc(100% - 90px);
+    }
+}
+/* end landing */
+/* start feature */
+.features .feat .ico-holder{
+    height: 200px;
+}
+.features .feat .ico-holder .number{
+    font-size: 12rem;
+    color: var(--section-color);
+    transform: translateX(-50%);
+}
+.features .feat .ico-holder .icon{
+    font-size: 4rem;
+    color: var(--green-color);
+    transform: translateX(-50%);
+}
+.features .feat h4{
+    color: var(--yellow-color);
+}
+/* end feature */
+/* start our work  */
+
+.our-work{
+    background-color: var(--section-color);
+}
+.our-work ul li{
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+.our-work ul .active{
+    background-color: var(--red-color);
+    color: var(--yellow-color)!important;
+}
+.our-work ul li:hover{
+    color: var(--red-color);
+}
+.our-work .row img{
+    max-width: calc(100% - 10px);
+}
+.our-work .row .img-box{
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.our-work .row .img-box::after{
+    content: attr(data-work);
+    width: calc(100% - 30px);
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 15px;
+    background-color: #33d1cc8e;
+    font-weight: bold;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.our-work .row .img-box:hover:after{
+    top:0 ;
+}
+/* end our work  */
+/* start stuff */
+.stuff .description{
+    max-width: 500px;
+}
+/* end stuff */
+/* start team */
+.team{
+    background-color: var(--section-color);
+}
+.team .title{
+    color: var(--yellow-color);
+}
+.team .row h4{
+    background-color: var(--green-color);
+    color: #fff;
+    font-weight: 600;
+}
+/* end team */
+/* start project */
+.project{
+    background-color: var(--dark-color);
+}
+/* end project */
+/* start subscribe */
+.subscribe{
+    background-color: var(--yellow-color);
+}
+.subscribe form input[type="email"]{
+    background-color: var(--yellow-color);
+    border: none;
+    border-bottom: 2px solid white;
+    color: #fff;
+}
+.subscribe form input[type="email"]::placeholder{
+    color: #fff;
+}
+.subscribe form input[type="email"]:focus{
+    outline: none;
+}
+/* end subscribe */
+/* start footer */
+footer{
+    background-color: var(--dark-color);
+}
+footer .info > div:first-of-type > span{
+    color: var(--green-color);
+}
+footer .info > div:last-of-type > span{
+    color: var(--yellow-color);
+}
+footer .icons svg{
+    color: #fff;
+}
+footer .icons .facebook{
+    background-color: #1877f2;
+}
+footer .icons .twitter{
+    background-color: #1da1f2;
+}
+footer .icons .linkedin{
+    background-color: #0a66c2;
+}
+footer .icons .youtube{
+    background-color: #ff0000;
+}
+/* end footer */
